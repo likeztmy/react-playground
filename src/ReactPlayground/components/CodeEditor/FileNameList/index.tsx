@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { PlaygroundContext } from "../../../PlaygroundContext";
 import { FileNameItem } from "./FileNameItem";
 import styles from "./index.module.scss";
