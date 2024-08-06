@@ -1,13 +1,13 @@
 .tabs {
   display: flex;
   align-items: center;
-  height: 38px;
+  min-height: 38px;
   overflow-x: auto;
   overflow-y: hidden;
   border-bottom: 1px solid #000;
   box-sizing: border-box;
-  color:#444;
-  background-color: #f8f8f8;
+  color: var(--text);
+  background-color: var(--bg);
   padding-right: 10px;
 
   .tab-item {
