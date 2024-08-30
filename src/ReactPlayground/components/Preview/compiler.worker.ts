@@ -20,7 +20,7 @@ export const babelTransform = (
   code: string,
   files: Files
 ) => {
-  let _code = beforeTransformCode(filename, code);
+  const _code = beforeTransformCode(filename, code);
   let result = "";
   try {
     result = transform(_code, {
@@ -115,3 +115,14 @@ export const compile = (files: Files) => {
   const main = files[ENTRY_FILE_NAME];
   return babelTransform(ENTRY_FILE_NAME, main.value, files);
 };
+
+self.addEventListener('message',async({data}) => {
+  try {
+    self.postMessage({
+      type: 'COMPILED_CODE',
+      data: compile(data)
+    })
+  } catch(e) {
+    self.postMessage({type: Error,error:e});
+  }
+})
