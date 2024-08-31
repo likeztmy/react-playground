@@ -1,9 +1,4 @@
-import React, {
-  PropsWithChildren,
-  createContext,
-  useEffect,
-  useState,
-} from "react";
+import { PropsWithChildren, createContext, useEffect, useState } from "react";
 import { comporss, fileNameToLanguage, uncompress } from "./utils";
 import { initFiles } from "./files";
 

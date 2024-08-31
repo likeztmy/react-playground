@@ -1,6 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { PlaygroundContext } from "../../PlaygroundContext";
-import { compile } from "./compiler.worker";
 import iframeRaw from "./iframe.html?raw";
 import { IMPORT_MAP_FILE_NAME } from "../../files";
 import { Message } from "../Message";
